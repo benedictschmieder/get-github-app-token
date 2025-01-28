@@ -1,0 +1,26 @@
+name: "Get GitHub App Token"
+description: "GitHub Action for creating a GitHub App installation access token using PowerShell."
+author: "Benedict Schmieder"
+branding:
+  icon: "lock"
+  color: "gray-dark"
+inputs:
+  app-id:
+    description: "GitHub App ID"
+    required: true 
+  private-key:
+    description: "GitHub App private key"
+    required: true
+outputs:
+  token:
+    description: "GitHub installation access token"
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      shell: pwsh
+      run: Install-Module 'jwtps' -AllowClobber -Force -ErrorAction Stop
+    - name: Get-AppToken
+      shell: pwsh
+      run: |
+        
