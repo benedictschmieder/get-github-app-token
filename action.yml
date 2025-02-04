@@ -20,4 +20,7 @@ runs:
     - name: Get-AppToken
       shell: pwsh
       run: |
+        Import-Module ${{ github.workspace }}/Get-GitHubAppToken
+        $accessToken = Get-GitHubAppToken -AppId ${{ inputs.app-id }} -PrivateKey ${{ inputs.private-key }}
+        Write-Output "token=$($accessToken)" >> $Env:GITHUB_OUTPUT
         
