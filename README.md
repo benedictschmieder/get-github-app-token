@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate access token
-        uses: benedictschmieder/get-github-app-token@v1
+        uses: benedictschmieder/get-github-app-token-ps@v1
         id: app-token
         with:
           app-id: ${{ vars.APP_ID }}
