@@ -1,4 +1,4 @@
-name: "Get GitHub App Token PS"
+name: "Get GitHub App Token PowerShell"
 description: "GitHub Action for creating a GitHub App installation access token using PowerShell."
 author: "Benedict Schmieder"
 branding:
