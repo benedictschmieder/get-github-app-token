@@ -34,6 +34,7 @@
 
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 Install-Module -Name 'jwtps' -AllowClobber -Force
+Import-Module -Name 'jwtps'
 
 function Get-GithubAppToken {
     [CmdletBinding()]
