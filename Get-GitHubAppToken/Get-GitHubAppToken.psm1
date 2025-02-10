@@ -32,7 +32,8 @@
     Get-GitHubAppToken -AppId 123456 -PrivateKey $privateKey
 #>
 
-Install-Module -Name 'jwtps' -AllowClobber
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+Install-Module -Name 'jwtps' -AllowClobber -Force
 
 function Get-GithubAppToken {
     [CmdletBinding()]
